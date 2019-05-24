@@ -7,7 +7,8 @@ def showMenu():
     print("# 1- Create the library to perform the simlation                                                  #")
     print("# 2- Perform the simlation                                                                        #")
     print("# 3- Show results                                                                                 #")
-    print("# 4- Clean results and library                                                                    #")
+    print("# 4- Show fpga project in Quartus Prime                                                           #")
+    print("# 8- Clean results and library                                                                    #")
     print("# 9- Exit                                                                                         #")
     print("# Note: If you dont know what are you doing, simple input the numbers in order one by one         #")
     print("###################################################################################################")
@@ -50,6 +51,12 @@ while exit == 0:
         selection = int(input("Type another option or type 0 to show the menu again: "))
 
     elif selection == 4:
+        print("Opening Quartus Prime...")
+        os.system("simpleMips.qpf")
+
+        selection = int(input("Type another option or type 0 to show the menu again: "))
+
+    elif selection == 8:
 
         print("Cleaning...")
         # Please dont uncomment this until the work is finished +_+
@@ -59,5 +66,8 @@ while exit == 0:
 
     elif selection == 9:
         exit=1
+
+    else:
+        selection = int(input("Type another option or type 0 to show the menu again: "))
 
 print("Thank ya")
