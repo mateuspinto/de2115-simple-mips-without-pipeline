@@ -11,8 +11,16 @@ module executing(
 
 logic [3:0] aluControl;
 logic [3:0] mdluControl;
+logic [31:0] outputHiLo [1:0];
+logic [31:0] outputHi;
+logic [31:0] outputLo;
+logic [31:0] resultAluOutput;
+logic regHiLoWrite;
 
-aritimeticalControl aritimeticalControl0 (clk, reset, aluOp, func, aluControl);
-alu alu0 (reset, aluControl, aluInput0, aluInput1, resultOutput, isAluOutputZero);
+aritimeticalControl aritimeticalControl0 (clk, reset, aluOp, func, aluControl, regHiLoWrite);
+alu alu0 (reset, aluControl, aluInput0, aluInput1, resultAluOutput, isAluOutputZero);
+mdlu mdlu0 (reset, aluControl, aluInput0, aluInput1, outputHiLo);
+hiLoRegister hiLoRegister0 (clk, reset, regHiLoWrite, outputHiLo, outputHi, outputLo);
+outputExecuting outputExecuting0 (aluControl, outputHi, outputLo, resultAluOutput, resultOutput);
 
 endmodule

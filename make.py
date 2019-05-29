@@ -4,8 +4,8 @@ def showMenu():
     print("###################################################################################################")
     print("#                                       Welcome to MIPS                                           #")
     print("###################################################################################################")
-    print("# 1- Create the library to perform the simlation                                                  #")
-    print("# 2- Perform the simlation                                                                        #")
+    print("# 1- Create the library to perform the simulation                                                 #")
+    print("# 2- Perform the simulation                                                                       #")
     print("# 3- Show results                                                                                 #")
     print("# 4- Show fpga project in Quartus Prime                                                           #")
     print("# 8- Clean results and library                                                                    #")
@@ -18,7 +18,7 @@ syntetizer = "vlog"
 simulator = "vsim"
 
 testbench = "testbench"
-files = testbench + ".sv libMips.sv auxModules.sv cores/instructionDecode/instructionDecode.sv cores/instructionDecode/registerDatabase.sv cores/instructionFetch/instructionFetch.sv cores/instructionFetch/instructionMemory.sv cores/instructionFetch/programCounter.sv cores/instructionFetch/adderProgramCounter.sv cores/instructionFetch/branchController.sv cores/executing/alu.sv cores/executing/aritimeticalControl.sv cores/executing/executing.sv cores/memory/memoryDatabase.sv cores/memory/memory.sv cores/writeBack/writeBack.sv controller.sv mips.sv fpgaIntegration/displaySevSegm/binaryToHexSevSegm.sv fpgaIntegration/displaySevSegm/displaySevSegm.sv fpgaIntegration/fpgaController/clockChooser.sv fpgaIntegration/fpgaController/infoChooser.sv"
+files = testbench + ".sv libMips.sv auxModules.sv cores/instructionDecode/instructionDecode.sv cores/instructionDecode/registerDatabase.sv cores/instructionFetch/instructionFetch.sv cores/instructionFetch/instructionMemory.sv cores/instructionFetch/programCounter.sv cores/instructionFetch/adderProgramCounter.sv cores/instructionFetch/branchController.sv cores/executing/alu.sv cores/executing/aritimeticalControl.sv cores/executing/executing.sv cores/executing/hiLoRegister.sv cores/executing/mdlu.sv cores/executing/outputExecuting.sv cores/memory/memoryDatabase.sv cores/memory/memory.sv cores/writeBack/writeBack.sv controller.sv mips.sv fpgaIntegration/displaySevSegm/binaryToHexSevSegm.sv fpgaIntegration/displaySevSegm/displaySevSegm.sv fpgaIntegration/fpgaController/clockChooser.sv fpgaIntegration/fpgaController/infoChooser.sv"
 exit = 0
 
 showMenu()

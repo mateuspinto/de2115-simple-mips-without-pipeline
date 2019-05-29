@@ -42,6 +42,18 @@ module controller(
                 regWrite <= 1;
             end
 
+            else if(instruction==6'b001000) begin // R type
+                regDst <= 0;
+                jump <= 0;
+                branch <= 0;
+                memRead <= 0;
+                memToReg <= 0;
+                aluOp <= 2;
+                memWrite <= 0;
+                aluSrc <= 1;
+                regWrite <= 1;
+            end
+
             else if(instruction==6'b101011) begin // SW
                 regDst <= 0;
                 jump <= 0;

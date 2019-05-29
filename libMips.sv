@@ -18,6 +18,10 @@ parameter ALU_SRA = 6;
 parameter ALU_SRL = 7;
 parameter ALU_SUB = 8;
 parameter ALU_ZERO = 9;
+parameter ALU_MULT = 10;
+parameter ALU_DIV = 11;
+parameter ALU_MFHI = 12;
+parameter ALU_MFLO = 13;
 
 endpackage
 
@@ -32,6 +36,7 @@ parameter OR = 6'b100101;
 parameter SLT = 6'b101010;
 parameter LW = 6'b100011;
 parameter SW = 6'b101011;
+parameter R = 6'b000000;
 
 endpackage
 
@@ -44,5 +49,7 @@ parameter FUNC_OR = 6'b100101;
 parameter FUNC_SLT = 6'b101010;
 parameter FUNC_MULT = 6'b011000;
 parameter FUNC_DIV = 6'b011010;
+parameter FUNC_MFHI = 6'b010000;
+parameter FUNC_MFLO = 6'b010010;
 
 endpackage
