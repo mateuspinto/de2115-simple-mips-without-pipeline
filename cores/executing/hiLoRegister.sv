@@ -4,13 +4,15 @@ module hiLoRegister(
     input logic regHiLoWrite,
     input logic [31:0] inputHilo [1:0],
     output logic [31:0] outputHi,
-    output logic [31:0] outputLo
+    output logic [31:0] outputLo,
+    output wire [31:0] ioHiLo [1:0]
 );
 
 logic [31:0] hiLo [1:0];
 
 assign outputHi = hiLo[0];
 assign outputLo = hiLo[1];
+assign ioHiLo = hiLo;
 
 always_ff @(posedge clk) begin
 
@@ -18,8 +20,10 @@ always_ff @(posedge clk) begin
         $readmemb("cores/executing/hiLoregister.txt",hiLo);
     end
 
-    if(~reset && regHiLoWrite) begin
-        hiLo <= inputHilo;
+    else begin
+        if (regHiLoWrite) begin
+            hiLo <= inputHilo;
+        end
     end
 end
 

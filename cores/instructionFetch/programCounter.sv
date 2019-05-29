@@ -11,8 +11,9 @@ module programCounter (
             programCounterOutput <= 0;
         end
 
-        if (~reset)
+        else begin
             programCounterOutput <= programCounterInput;
+		  end
     end
 
 endmodule

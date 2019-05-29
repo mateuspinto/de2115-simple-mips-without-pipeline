@@ -1,6 +1,7 @@
 module infoChooser(
     input wire [31:0] ioInstruction [255:0],
     input wire [31:0] ioRegisters [31:0],
+    input wire [31:0] ioHiLo [1:0],
     input wire [31:0] ioMemory [1023:0],
     input wire [9:0] derreference,
     input wire [1:0] select,
@@ -19,6 +20,10 @@ always_comb begin
         end
 
         2: begin
+            word <= ioHiLo[derreference[0]];
+        end
+
+        3: begin
             word <= ioMemory[derreference];
         end
         

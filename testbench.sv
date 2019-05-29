@@ -3,7 +3,8 @@ module testbench();
 	logic clk, reset, regDst, jump, memRead, memToReg, memWrite, aluSrc, regWrite, isAluOutputZero;
 	logic [31:0] instruction, writeData, aluInput0, aluInput1, branch, memoryWritedata, resultOutput, readData;
 	logic [5:0] func;
-	logic [1:0] aluOp, branchC;
+	logic [3:0] aluOp;
+	logic [1:0] branchC;
 
 	always begin
 		clk <= 1; #1;

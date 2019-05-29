@@ -24,8 +24,10 @@ always_ff @(posedge clk) begin
         $readmemb("cores/instructionDecode/registers.txt",registers);
     end
 
-    if(~reset && regWrite) begin
-        registers[writeRegister] <= writeData;
+    else begin
+        if (regWrite) begin
+            registers[writeRegister] <= writeData;
+        end
     end
 end
 

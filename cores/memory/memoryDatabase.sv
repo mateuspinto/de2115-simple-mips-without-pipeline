@@ -18,8 +18,10 @@ always_ff @(posedge clk) begin
             $readmemb("cores/memory/memory.txt",memory);
         end
 
-        if (~reset & memWrite) begin
-            memory[address[31:2]] <= writeData;
+        else begin
+            if (memWrite) begin
+                memory[address[31:2]] <= writeData;
+            end
         end
 end
 

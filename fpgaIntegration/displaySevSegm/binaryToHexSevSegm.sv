@@ -17,11 +17,11 @@ always_comb begin
             4'b1001: display <= 7'b0010000; //9
             4'b1010: display <= 7'b0001000; //A
             4'b1011: display <= 7'b0000011; //B
-				4'b1100: display <= 7'b1000110; //C
-				4'b1101: display <= 7'b0100001; //D
-				4'b1110: display <= 7'b0000110; //E
-				4'b1111: display <= 7'b0001110; //F
-            default: display <= 7'b1111111;
+			4'b1100: display <= 7'b1000110; //C
+			4'b1101: display <= 7'b0100001; //D
+			4'b1110: display <= 7'b0000110; //E
+			4'b1111: display <= 7'b0001110; //F
+            default: display <= 7'b1111111; //Display off
 
         endcase
 end

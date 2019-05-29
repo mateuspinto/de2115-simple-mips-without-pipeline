@@ -1,1 +1,6 @@
 v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mips:mips0|executing:executing0|mdlu:mdlu0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mips:mips0|executing:executing0|mdlu:mdlu0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out4,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mips:mips0|executing:executing0|mdlu:mdlu0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,mips:mips0|executing:executing0|mdlu:mdlu0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out6,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,mips:mips0|executing:executing0|mdlu:mdlu0|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult5,

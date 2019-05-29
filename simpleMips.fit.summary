@@ -1,16 +1,16 @@
-Fitter Status : Successful - Fri May 24 16:32:47 2019
+Fitter Status : Successful - Wed May 29 20:41:43 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : simpleMips
 Top-level Entity Name : simpleMips
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 167 / 114,480 ( < 1 % )
-    Total combinational functions : 167 / 114,480 ( < 1 % )
-    Dedicated logic registers : 40 / 114,480 ( < 1 % )
-Total registers : 40
+Total logic elements : 3,366 / 114,480 ( 3 % )
+    Total combinational functions : 3,341 / 114,480 ( 3 % )
+    Dedicated logic registers : 200 / 114,480 ( < 1 % )
+Total registers : 200
 Total pins : 81 / 529 ( 15 % )
 Total virtual pins : 0
 Total memory bits : 0 / 3,981,312 ( 0 % )
-Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Embedded Multiplier 9-bit elements : 8 / 532 ( 2 % )
 Total PLLs : 0 / 4 ( 0 % )

@@ -1,4 +1,5 @@
 import libInstructions::*;
+import libAritimeticalControl::*;
 
 module controller(
                   input logic reset,
@@ -8,7 +9,7 @@ module controller(
                   output logic [1:0] branch,
                   output logic memRead,
                   output logic memToReg,
-                  output logic [1:0] aluOp,
+                  output logic [3:0] aluOp,
                   output logic memWrite,
                   output logic aluSrc,
                   output logic regWrite
@@ -22,7 +23,7 @@ module controller(
             branch <= 0;
             memRead <= 0;
             memToReg <= 0;
-            aluOp <= 0;
+            aluOp <= ARCTRL_ZERO;
             memWrite <= 0;
             aluSrc <= 0;
             regWrite <= 0;
@@ -30,89 +31,164 @@ module controller(
 
         else begin
 
-            if(instruction==6'b000000) begin // R type
-                regDst <= 1;
-                jump <= 0;
-                branch <= 0;
-                memRead <= 0;
-                memToReg <= 0;
-                aluOp <= 1;
-                memWrite <= 0;
-                aluSrc <= 0;
-                regWrite <= 1;
-            end
+            case(instruction)
 
-            else if(instruction==6'b001000) begin // R type
-                regDst <= 0;
-                jump <= 0;
-                branch <= 0;
-                memRead <= 0;
-                memToReg <= 0;
-                aluOp <= 2;
-                memWrite <= 0;
-                aluSrc <= 1;
-                regWrite <= 1;
-            end
+                R: begin
+                    regDst <= 1;
+                    jump <= 0;
+                    branch <= 0;
+                    memRead <= 0;
+                    memToReg <= 0;
+                    aluOp <= ARCTRL_FUNC;
+                    memWrite <= 0;
+                    aluSrc <= 0;
+                    regWrite <= 1;
+                end
 
-            else if(instruction==6'b101011) begin // SW
-                regDst <= 0;
-                jump <= 0;
-                branch <= 0;
-                memRead <= 0;
-                memToReg <= 0;
-                aluOp <= 2;
-                memWrite <= 1;
-                aluSrc <= 1;
-                regWrite <= 0;
-            end
+                ADDI: begin
+                    regDst <= 0;
+                    jump <= 0;
+                    branch <= 0;
+                    memRead <= 0;
+                    memToReg <= 0;
+                    aluOp <= ARCTRL_ADD;
+                    memWrite <= 0;
+                    aluSrc <= 1;
+                    regWrite <= 1;
+                end
 
-            else if(instruction==6'b100011) begin // LW
-                regDst <= 0;
-                jump <= 0;
-                branch <= 0;
-                memRead <= 1;
-                memToReg <= 1;
-                aluOp <= 2;
-                memWrite <= 0;
-                aluSrc <= 1;
-                regWrite <= 1;
-            end
+                ANDI: begin
+                    regDst <= 0;
+                    jump <= 0;
+                    branch <= 0;
+                    memRead <= 0;
+                    memToReg <= 0;
+                    aluOp <= ARCTRL_AND;
+                    memWrite <= 0;
+                    aluSrc <= 1;
+                    regWrite <= 1;
+                end
 
-            else if(instruction==6'b000100) begin // BEQ
-                regDst <= 0;
-                jump <= 0;
-                branch <= 1;
-                memRead <= 0;
-                memToReg <= 0;
-                aluOp <= 3;
-                memWrite <= 0;
-                aluSrc <= 0;
-                regWrite <= 0;
-            end
+                ORI: begin
+                    regDst <= 0;
+                    jump <= 0;
+                    branch <= 0;
+                    memRead <= 0;
+                    memToReg <= 0;
+                    aluOp <= ARCTRL_OR;
+                    memWrite <= 0;
+                    aluSrc <= 1;
+                    regWrite <= 1;
+                end
 
-            else if(instruction==6'b000010) begin // JUMP
-                regDst <= 0;
-                jump <= 1;
-                branch <= 0;
-                memRead <= 0;
-                memToReg <= 0;
-                aluOp <= 0;
-                memWrite <= 0;
-                aluSrc <= 0;
-                regWrite <= 0;
-            end
+                XORI: begin
+                    regDst <= 0;
+                    jump <= 0;
+                    branch <= 0;
+                    memRead <= 0;
+                    memToReg <= 0;
+                    aluOp <= ARCTRL_XOR;
+                    memWrite <= 0;
+                    aluSrc <= 1;
+                    regWrite <= 1;
+                end
 
-            else begin
-                regDst <= 0;
-                jump <= 0;
-                branch <= 0;
-                memRead <= 0;
-                memToReg <= 0;
-                aluOp <= 0;
-                memWrite <= 0;
-                aluSrc <= 0;
-                regWrite <= 0;
-            end
+                SLTI: begin
+                    regDst <= 0;
+                    jump <= 0;
+                    branch <= 0;
+                    memRead <= 0;
+                    memToReg <= 0;
+                    aluOp <= ARCTRL_SLT;
+                    memWrite <= 0;
+                    aluSrc <= 1;
+                    regWrite <= 1;
+                end
+
+                LUI: begin
+                    regDst <= 0;
+                    jump <= 0;
+                    branch <= 0;
+                    memRead <= 0;
+                    memToReg <= 0;
+                    aluOp <= ARCTRL_LU;
+                    memWrite <= 0;
+                    aluSrc <= 1;
+                    regWrite <= 1;
+                end
+
+                SW: begin
+                    regDst <= 0;
+                    jump <= 0;
+                    branch <= 0;
+                    memRead <= 0;
+                    memToReg <= 0;
+                    aluOp <= ARCTRL_ADD;
+                    memWrite <= 1;
+                    aluSrc <= 1;
+                    regWrite <= 0;
+                end
+
+                LW: begin
+                    regDst <= 0;
+                    jump <= 0;
+                    branch <= 0;
+                    memRead <= 1;
+                    memToReg <= 1;
+                    aluOp <= ARCTRL_ADD;
+                    memWrite <= 0;
+                    aluSrc <= 1;
+                    regWrite <= 1;
+                end
+
+                BEQ: begin
+                    regDst <= 0;
+                    jump <= 0;
+                    branch <= 1;
+                    memRead <= 0;
+                    memToReg <= 0;
+                    aluOp <= ARCTRL_SUB;
+                    memWrite <= 0;
+                    aluSrc <= 0;
+                    regWrite <= 0;
+                end
+
+                BNE: begin
+                    regDst <= 0;
+                    jump <= 0;
+                    branch <= 2;
+                    memRead <= 0;
+                    memToReg <= 0;
+                    aluOp <= ARCTRL_SUB;
+                    memWrite <= 0;
+                    aluSrc <= 0;
+                    regWrite <= 0;
+                end
+
+                J: begin
+                    regDst <= 0;
+                    jump <= 1;
+                    branch <= 0;
+                    memRead <= 0;
+                    memToReg <= 0;
+                    aluOp <= ARCTRL_ZERO;
+                    memWrite <= 0;
+                    aluSrc <= 0;
+                    regWrite <= 0;
+                end
+                
+                default: begin
+                    regDst <= 0;
+                    jump <= 0;
+                    branch <= 0;
+                    memRead <= 0;
+                    memToReg <= 0;
+                    aluOp <= ARCTRL_ZERO;
+                    memWrite <= 0;
+                    aluSrc <= 0;
+                    regWrite <= 0;
+                end
+            endcase
 
         end
     end
