@@ -1,5 +1,5 @@
 Analysis & Synthesis report for simpleMips
-Wed May 29 20:41:06 2019
+Thu May 30 09:48:43 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -51,13 +51,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 29 20:41:06 2019       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 30 09:48:43 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; simpleMips                                  ;
 ; Top-level Entity Name              ; simpleMips                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 3,435                                       ;
-;     Total combinational functions  ; 3,341                                       ;
+; Total logic elements               ; 3,431                                       ;
+;     Total combinational functions  ; 3,337                                       ;
 ;     Dedicated logic registers      ; 200                                         ;
 ; Total registers                    ; 200                                         ;
 ; Total pins                         ; 81                                          ;
@@ -76,7 +76,8 @@ refer to the applicable agreement for further details.
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
 ; Top-level entity name                                            ; simpleMips         ; simpleMips         ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
-; Use smart compilation                                            ; Off                ; Off                ;
+; Use smart compilation                                            ; On                 ; Off                ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
 ; Restructure Multiplexers                                         ; Auto               ; Auto               ;
@@ -231,16 +232,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 3,435                          ;
+; Estimated Total logic elements              ; 3,431                          ;
 ;                                             ;                                ;
-; Total combinational functions               ; 3341                           ;
+; Total combinational functions               ; 3337                           ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 1772                           ;
-;     -- 3 input functions                    ; 1428                           ;
-;     -- <=2 input functions                  ; 141                            ;
+;     -- 4 input functions                    ; 1785                           ;
+;     -- 3 input functions                    ; 1420                           ;
+;     -- <=2 input functions                  ; 132                            ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 2114                           ;
+;     -- normal mode                          ; 2110                           ;
 ;     -- arithmetic mode                      ; 1227                           ;
 ;                                             ;                                ;
 ; Total registers                             ; 200                            ;
@@ -253,7 +254,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                                ;
 ; Maximum fan-out node                        ; clockChooser:clockChooser0|clk ;
 ; Maximum fan-out                             ; 200                            ;
-; Total fan-out                               ; 12455                          ;
+; Total fan-out                               ; 12465                          ;
 ; Average fan-out                             ; 3.36                           ;
 +---------------------------------------------+--------------------------------+
 
@@ -263,7 +264,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                          ; Entity Name         ; Library Name ;
 +-----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |simpleMips                                         ; 3341 (0)            ; 200 (0)                   ; 0           ; 8            ; 0       ; 4         ; 81   ; 0            ; |simpleMips                                                                                                                                                                  ; simpleMips          ; work         ;
+; |simpleMips                                         ; 3337 (0)            ; 200 (0)                   ; 0           ; 8            ; 0       ; 4         ; 81   ; 0            ; |simpleMips                                                                                                                                                                  ; simpleMips          ; work         ;
 ;    |clockChooser:clockChooser0|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|clockChooser:clockChooser0                                                                                                                                       ; clockChooser        ; work         ;
 ;    |displaySevSegm:displaySevSegm0|                 ; 56 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|displaySevSegm:displaySevSegm0                                                                                                                                   ; displaySevSegm      ; work         ;
 ;       |binaryToHexSevSegm:binaryToHexSevSegm0|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|displaySevSegm:displaySevSegm0|binaryToHexSevSegm:binaryToHexSevSegm0                                                                                            ; binaryToHexSevSegm  ; work         ;
@@ -274,32 +275,32 @@ refer to the applicable agreement for further details.
 ;       |binaryToHexSevSegm:binaryToHexSevSegm5|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|displaySevSegm:displaySevSegm0|binaryToHexSevSegm:binaryToHexSevSegm5                                                                                            ; binaryToHexSevSegm  ; work         ;
 ;       |binaryToHexSevSegm:binaryToHexSevSegm6|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|displaySevSegm:displaySevSegm0|binaryToHexSevSegm:binaryToHexSevSegm6                                                                                            ; binaryToHexSevSegm  ; work         ;
 ;       |binaryToHexSevSegm:binaryToHexSevSegm7|      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|displaySevSegm:displaySevSegm0|binaryToHexSevSegm:binaryToHexSevSegm7                                                                                            ; binaryToHexSevSegm  ; work         ;
-;    |mips:mips0|                                     ; 3284 (0)            ; 200 (0)                   ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |simpleMips|mips:mips0                                                                                                                                                       ; mips                ; work         ;
+;    |mips:mips0|                                     ; 3280 (0)            ; 200 (0)                   ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |simpleMips|mips:mips0                                                                                                                                                       ; mips                ; work         ;
 ;       |controller:controller0|                      ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|controller:controller0                                                                                                                                ; controller          ; work         ;
-;       |executing:executing0|                        ; 2906 (0)            ; 64 (0)                    ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0                                                                                                                                  ; executing           ; work         ;
-;          |alu:alu0|                                 ; 378 (378)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|alu:alu0                                                                                                                         ; alu                 ; work         ;
+;       |executing:executing0|                        ; 2933 (0)            ; 64 (0)                    ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0                                                                                                                                  ; executing           ; work         ;
+;          |alu:alu0|                                 ; 390 (390)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|alu:alu0                                                                                                                         ; alu                 ; work         ;
 ;          |aritimeticalControl:aritimeticalControl0| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|aritimeticalControl:aritimeticalControl0                                                                                         ; aritimeticalControl ; work         ;
 ;          |hiLoRegister:hiLoRegister0|               ; 1 (1)               ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0                                                                                                       ; hiLoRegister        ; work         ;
-;          |mdlu:mdlu0|                               ; 2324 (96)           ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0                                                                                                                       ; mdlu                ; work         ;
-;             |lpm_divide:Div0|                       ; 1082 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
-;                |lpm_divide_hkm:auto_generated|      ; 1082 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm      ; work         ;
-;                   |sign_div_unsign_9nh:divider|     ; 1082 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh ; work         ;
-;                      |alt_u_div_6af:divider|        ; 1082 (1081)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af       ; work         ;
+;          |mdlu:mdlu0|                               ; 2307 (95)           ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0                                                                                                                       ; mdlu                ; work         ;
+;             |lpm_divide:Div0|                       ; 1083 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
+;                |lpm_divide_hkm:auto_generated|      ; 1083 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm      ; work         ;
+;                   |sign_div_unsign_9nh:divider|     ; 1083 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh ; work         ;
+;                      |alt_u_div_6af:divider|        ; 1083 (1082)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af       ; work         ;
 ;                         |add_sub_8pc:add_sub_1|     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc         ; work         ;
-;             |lpm_divide:Mod0|                       ; 1067 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Mod0                                                                                                       ; lpm_divide          ; work         ;
-;                |lpm_divide_kcm:auto_generated|      ; 1067 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Mod0|lpm_divide_kcm:auto_generated                                                                         ; lpm_divide_kcm      ; work         ;
-;                   |sign_div_unsign_9nh:divider|     ; 1067 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh ; work         ;
-;                      |alt_u_div_6af:divider|        ; 1067 (1067)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af       ; work         ;
+;             |lpm_divide:Mod0|                       ; 1050 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Mod0                                                                                                       ; lpm_divide          ; work         ;
+;                |lpm_divide_kcm:auto_generated|      ; 1050 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Mod0|lpm_divide_kcm:auto_generated                                                                         ; lpm_divide_kcm      ; work         ;
+;                   |sign_div_unsign_9nh:divider|     ; 1050 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh ; work         ;
+;                      |alt_u_div_6af:divider|        ; 1050 (1050)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af       ; work         ;
 ;             |lpm_mult:Mult0|                        ; 79 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_mult:Mult0                                                                                                        ; lpm_mult            ; work         ;
 ;                |mult_7dt:auto_generated|            ; 79 (79)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mdlu:mdlu0|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt            ; work         ;
+;          |mux2_1_32bits:mux2_1_32bits0|             ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|mux2_1_32bits:mux2_1_32bits0                                                                                                     ; mux2_1_32bits       ; work         ;
 ;          |outputExecuting:outputExecuting0|         ; 196 (196)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|executing:executing0|outputExecuting:outputExecuting0                                                                                                 ; outputExecuting     ; work         ;
 ;       |infoChooser:infoChooser0|                    ; 191 (191)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|infoChooser:infoChooser0                                                                                                                              ; infoChooser         ; work         ;
-;       |instructionDecode:instructionDecode0|        ; 154 (0)             ; 128 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0                                                                                                                  ; instructionDecode   ; work         ;
-;          |mux2_1_32bits:muxData2|                   ; 96 (96)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|mux2_1_32bits:muxData2                                                                                           ; mux2_1_32bits       ; work         ;
-;          |registerDatabase:registerDatabase0|       ; 58 (58)             ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0                                                                               ; registerDatabase    ; work         ;
-;       |instructionFetch:instructionFetch0|          ; 30 (0)              ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|instructionFetch:instructionFetch0                                                                                                                    ; instructionFetch    ; work         ;
+;       |instructionDecode:instructionDecode0|        ; 124 (0)             ; 128 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0                                                                                                                  ; instructionDecode   ; work         ;
+;          |registerDatabase:registerDatabase0|       ; 124 (124)           ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0                                                                               ; registerDatabase    ; work         ;
+;       |instructionFetch:instructionFetch0|          ; 29 (0)              ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|instructionFetch:instructionFetch0                                                                                                                    ; instructionFetch    ; work         ;
 ;          |adderProgramCounter:adderProgramCounter0| ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|instructionFetch:instructionFetch0|adderProgramCounter:adderProgramCounter0                                                                           ; adderProgramCounter ; work         ;
-;          |instructionMemory:instructionMemory0|     ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|instructionFetch:instructionFetch0|instructionMemory:instructionMemory0                                                                               ; instructionMemory   ; work         ;
+;          |instructionMemory:instructionMemory0|     ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|instructionFetch:instructionFetch0|instructionMemory:instructionMemory0                                                                               ; instructionMemory   ; work         ;
 ;          |programCounter:programCounter0|           ; 9 (9)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |simpleMips|mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0                                                                                     ; programCounter      ; work         ;
 +-----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -6273,30 +6274,29 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][26]   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[3][30]   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[0][12]   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][23]   ;
-; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |simpleMips|mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][4]                                 ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |simpleMips|mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[19] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|Mux9               ;
-; 5:1                ; 26 bits   ; 78 LEs        ; 78 LEs               ; 0 LEs                  ; No         ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|mux2_1_32bits:muxData2|output0[0]                     ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|mux2_1_32bits:muxData2|output0[1]                     ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; No         ; |simpleMips|mips:mips0|executing:executing0|aritimeticalControl:aritimeticalControl0|aluControl[2]                ;
-; 36:1               ; 19 bits   ; 456 LEs       ; 152 LEs              ; 304 LEs                ; No         ; |simpleMips|mips:mips0|infoChooser:infoChooser0|Mux120                                                            ;
-; 36:1               ; 13 bits   ; 312 LEs       ; 195 LEs              ; 117 LEs                ; No         ; |simpleMips|mips:mips0|infoChooser:infoChooser0|Mux105                                                            ;
-; 22:1               ; 8 bits    ; 112 LEs       ; 88 LEs               ; 24 LEs                 ; No         ; |simpleMips|mips:mips0|executing:executing0|outputExecuting:outputExecuting0|Selector22                           ;
-; 23:1               ; 7 bits    ; 105 LEs       ; 84 LEs               ; 21 LEs                 ; No         ; |simpleMips|mips:mips0|executing:executing0|outputExecuting:outputExecuting0|Selector14                           ;
-; 23:1               ; 4 bits    ; 60 LEs        ; 44 LEs               ; 16 LEs                 ; No         ; |simpleMips|mips:mips0|executing:executing0|outputExecuting:outputExecuting0|Selector27                           ;
-; 24:1               ; 4 bits    ; 64 LEs        ; 52 LEs               ; 12 LEs                 ; No         ; |simpleMips|mips:mips0|executing:executing0|outputExecuting:outputExecuting0|Selector4                            ;
-; 24:1               ; 2 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |simpleMips|mips:mips0|executing:executing0|outputExecuting:outputExecuting0|Selector29                           ;
-; 25:1               ; 2 bits    ; 32 LEs        ; 26 LEs               ; 6 LEs                  ; No         ; |simpleMips|mips:mips0|executing:executing0|outputExecuting:outputExecuting0|Selector2                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][14]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[3][4]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[0][29]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][5]   ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |simpleMips|mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[0][0]                                ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |simpleMips|mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[3] ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|Mux21             ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |simpleMips|mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|Mux44             ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; No         ; |simpleMips|mips:mips0|executing:executing0|aritimeticalControl:aritimeticalControl0|aluControl[2]               ;
+; 36:1               ; 19 bits   ; 456 LEs       ; 152 LEs              ; 304 LEs                ; No         ; |simpleMips|mips:mips0|infoChooser:infoChooser0|Mux97                                                            ;
+; 36:1               ; 13 bits   ; 312 LEs       ; 195 LEs              ; 117 LEs                ; No         ; |simpleMips|mips:mips0|infoChooser:infoChooser0|Mux106                                                           ;
+; 22:1               ; 8 bits    ; 112 LEs       ; 88 LEs               ; 24 LEs                 ; No         ; |simpleMips|mips:mips0|executing:executing0|outputExecuting:outputExecuting0|Selector23                          ;
+; 23:1               ; 7 bits    ; 105 LEs       ; 84 LEs               ; 21 LEs                 ; No         ; |simpleMips|mips:mips0|executing:executing0|outputExecuting:outputExecuting0|Selector8                           ;
+; 23:1               ; 4 bits    ; 60 LEs        ; 44 LEs               ; 16 LEs                 ; No         ; |simpleMips|mips:mips0|executing:executing0|outputExecuting:outputExecuting0|Selector24                          ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 52 LEs               ; 12 LEs                 ; No         ; |simpleMips|mips:mips0|executing:executing0|outputExecuting:outputExecuting0|Selector7                           ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |simpleMips|mips:mips0|executing:executing0|outputExecuting:outputExecuting0|Selector29                          ;
+; 25:1               ; 2 bits    ; 32 LEs        ; 26 LEs               ; 6 LEs                  ; No         ; |simpleMips|mips:mips0|executing:executing0|outputExecuting:outputExecuting0|Selector3                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -6419,21 +6419,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 128                         ;
 ;     ENA SCLR          ; 64                          ;
 ;     plain             ; 8                           ;
-; cycloneiii_lcell_comb ; 3349                        ;
+; cycloneiii_lcell_comb ; 3345                        ;
 ;     arith             ; 1227                        ;
 ;         2 data inputs ; 19                          ;
 ;         3 data inputs ; 1208                        ;
-;     normal            ; 2122                        ;
+;     normal            ; 2118                        ;
 ;         0 data inputs ; 61                          ;
 ;         1 data inputs ; 10                          ;
-;         2 data inputs ; 59                          ;
-;         3 data inputs ; 220                         ;
-;         4 data inputs ; 1772                        ;
+;         2 data inputs ; 50                          ;
+;         3 data inputs ; 212                         ;
+;         4 data inputs ; 1785                        ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 126.40                      ;
-; Average LUT depth     ; 88.10                       ;
+; Max LUT depth         ; 125.50                      ;
+; Average LUT depth     ; 87.02                       ;
 +-----------------------+-----------------------------+
 
 
@@ -6442,7 +6442,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:29     ;
+; Top            ; 00:00:33     ;
 +----------------+--------------+
 
 
@@ -6452,9 +6452,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 29 20:37:19 2019
+    Info: Processing started: Thu May 30 09:44:43 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simpleMips -c simpleMips
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file cores/executing/outputexecuting.sv
     Info (12023): Found entity 1: outputExecuting File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/outputExecuting.sv Line: 3
@@ -6504,8 +6503,8 @@ Info (12021): Found 5 design units, including 0 entities, in source file libmips
     Info (12022): Found design unit 1: libMdlu (SystemVerilog) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/libMips.sv Line: 1
     Info (12022): Found design unit 2: libAlu (SystemVerilog) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/libMips.sv Line: 9
     Info (12022): Found design unit 3: libInstructions (SystemVerilog) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/libMips.sv Line: 30
-    Info (12022): Found design unit 4: libFunctions (SystemVerilog) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/libMips.sv Line: 53
-    Info (12022): Found design unit 5: libAritimeticalControl (SystemVerilog) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/libMips.sv Line: 75
+    Info (12022): Found design unit 4: libFunctions (SystemVerilog) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/libMips.sv Line: 51
+    Info (12022): Found design unit 5: libAritimeticalControl (SystemVerilog) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/libMips.sv Line: 73
 Info (12021): Found 1 design units, including 1 entities, in source file controller.sv
     Info (12023): Found entity 1: controller File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/controller.sv Line: 4
 Info (12021): Found 6 design units, including 6 entities, in source file auxmodules.sv
@@ -6543,11 +6542,11 @@ Info (12128): Elaborating entity "branchController" for hierarchy "mips:mips0|in
 Info (12128): Elaborating entity "mux2_1_32bits" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|mux2_1_32bits:mux2_1_32bitsBranch" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 24
 Info (12128): Elaborating entity "shiftLeft_2_26_28_bits" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|shiftLeft_2_26_28_bits:shiftLeft_2_26_28_bits0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 27
 Info (12128): Elaborating entity "instructionDecode" for hierarchy "mips:mips0|instructionDecode:instructionDecode0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/mips.sv Line: 22
-Info (12128): Elaborating entity "registerDatabase" for hierarchy "mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionDecode/instructionDecode.sv Line: 19
-Info (12128): Elaborating entity "signalExtender16_32bits" for hierarchy "mips:mips0|instructionDecode:instructionDecode0|signalExtender16_32bits:signalExtender16_32bitsBranch" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionDecode/instructionDecode.sv Line: 20
-Info (12128): Elaborating entity "mux2_1_5bits" for hierarchy "mips:mips0|instructionDecode:instructionDecode0|mux2_1_5bits:muxWriteRegister" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionDecode/instructionDecode.sv Line: 21
+Info (12128): Elaborating entity "registerDatabase" for hierarchy "mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionDecode/instructionDecode.sv Line: 17
+Info (12128): Elaborating entity "signalExtender16_32bits" for hierarchy "mips:mips0|instructionDecode:instructionDecode0|signalExtender16_32bits:signalExtender16_32bitsBranch" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionDecode/instructionDecode.sv Line: 19
+Info (12128): Elaborating entity "mux2_1_5bits" for hierarchy "mips:mips0|instructionDecode:instructionDecode0|mux2_1_5bits:muxWriteRegister" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionDecode/instructionDecode.sv Line: 20
 Info (12128): Elaborating entity "executing" for hierarchy "mips:mips0|executing:executing0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/mips.sv Line: 23
-Info (12128): Elaborating entity "aritimeticalControl" for hierarchy "mips:mips0|executing:executing0|aritimeticalControl:aritimeticalControl0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 21
+Info (12128): Elaborating entity "aritimeticalControl" for hierarchy "mips:mips0|executing:executing0|aritimeticalControl:aritimeticalControl0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 26
 Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(16): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/aritimeticalControl.sv Line: 16
 Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(28): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/aritimeticalControl.sv Line: 28
 Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(33): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/aritimeticalControl.sv Line: 33
@@ -6571,10 +6570,10 @@ Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(122): 
 Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(127): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/aritimeticalControl.sv Line: 127
 Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(132): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/aritimeticalControl.sv Line: 132
 Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(137): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/aritimeticalControl.sv Line: 137
-Info (12128): Elaborating entity "alu" for hierarchy "mips:mips0|executing:executing0|alu:alu0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 22
-Info (12128): Elaborating entity "mdlu" for hierarchy "mips:mips0|executing:executing0|mdlu:mdlu0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 25
-Info (12128): Elaborating entity "hiLoRegister" for hierarchy "mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 26
-Info (12128): Elaborating entity "outputExecuting" for hierarchy "mips:mips0|executing:executing0|outputExecuting:outputExecuting0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 27
+Info (12128): Elaborating entity "alu" for hierarchy "mips:mips0|executing:executing0|alu:alu0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 27
+Info (12128): Elaborating entity "mdlu" for hierarchy "mips:mips0|executing:executing0|mdlu:mdlu0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 30
+Info (12128): Elaborating entity "hiLoRegister" for hierarchy "mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 31
+Info (12128): Elaborating entity "outputExecuting" for hierarchy "mips:mips0|executing:executing0|outputExecuting:outputExecuting0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 34
 Info (12128): Elaborating entity "memory" for hierarchy "mips:mips0|memory:memory0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/mips.sv Line: 24
 Info (12128): Elaborating entity "memoryDatabase" for hierarchy "mips:mips0|memory:memory0|memoryDatabase:memoryDatabase0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/memory/memory.sv Line: 11
 Info (12128): Elaborating entity "writeBack" for hierarchy "mips:mips0|writeBack:writeBack0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/mips.sv Line: 25
@@ -6642,15 +6641,15 @@ Warning (21074): Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/simpleMips.v Line: 17
     Warning (15610): No output dependent on input pin "SW[17]" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/simpleMips.v Line: 17
     Warning (15610): No output dependent on input pin "SW[16]" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/simpleMips.v Line: 17
-Info (21057): Implemented 3558 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3554 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
     Info (21059): Implemented 56 output pins
-    Info (21061): Implemented 3469 logic cells
+    Info (21061): Implemented 3465 logic cells
     Info (21062): Implemented 8 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
-    Info: Peak virtual memory: 6026 megabytes
-    Info: Processing ended: Wed May 29 20:41:06 2019
-    Info: Elapsed time: 00:03:47
-    Info: Total CPU time (on all processors): 00:04:00
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 6019 megabytes
+    Info: Processing ended: Thu May 30 09:48:43 2019
+    Info: Elapsed time: 00:04:00
+    Info: Total CPU time (on all processors): 00:04:12
 
 

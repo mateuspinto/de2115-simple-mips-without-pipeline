@@ -1,5 +1,5 @@
 Flow report for simpleMips
-Wed May 29 20:41:58 2019
+Thu May 30 09:51:54 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed May 29 20:41:49 2019       ;
+; Flow Status                        ; Successful - Thu May 30 09:51:54 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; simpleMips                                  ;
 ; Top-level Entity Name              ; simpleMips                                  ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 3,366 / 114,480 ( 3 % )                     ;
-;     Total combinational functions  ; 3,341 / 114,480 ( 3 % )                     ;
+; Total logic elements               ; 3,372 / 114,480 ( 3 % )                     ;
+;     Total combinational functions  ; 3,337 / 114,480 ( 3 % )                     ;
 ;     Dedicated logic registers      ; 200 / 114,480 ( < 1 % )                     ;
 ; Total registers                    ; 200                                         ;
 ; Total pins                         ; 81 / 529 ( 15 % )                           ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/29/2019 20:37:20 ;
+; Start date & time ; 05/30/2019 09:44:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; simpleMips          ;
 +-------------------+---------------------+
@@ -75,14 +75,17 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 167304650551745.155917304012152        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 167304650551745.155922028311376        ; --            ; --          ; --         ;
+; FLOW_ENABLE_RTL_VIEWER              ; On                                     ; Off           ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; NUM_PARALLEL_PROCESSORS             ; All                                    ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
+; SMART_RECOMPILE                     ; On                                     ; Off           ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
@@ -91,11 +94,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:03:46     ; 1.0                     ; 6026 MB             ; 00:03:59                           ;
-; Fitter               ; 00:00:36     ; 1.1                     ; 5803 MB             ; 00:01:06                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4697 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:08     ; 1.5                     ; 4978 MB             ; 00:00:09                           ;
-; Total                ; 00:04:34     ; --                      ; --                  ; 00:05:18                           ;
+; Analysis & Synthesis ; 00:03:59     ; 1.0                     ; 6019 MB             ; 00:04:11                           ;
+; Fitter               ; 00:01:26     ; 1.0                     ; 5767 MB             ; 00:01:56                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4702 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:33     ; 3.3                     ; 5061 MB             ; 00:00:33                           ;
+; Total                ; 00:06:02     ; --                      ; --                  ; 00:06:44                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,6 +121,7 @@ quartus_map --read_settings_files=on --write_settings_files=off simpleMips -c si
 quartus_fit --read_settings_files=off --write_settings_files=off simpleMips -c simpleMips
 quartus_asm --read_settings_files=off --write_settings_files=off simpleMips -c simpleMips
 quartus_sta simpleMips -c simpleMips
+quartus_eda --read_settings_files=on --write_settings_files=off simpleMips -c simpleMips
 
 
 
