@@ -24,7 +24,7 @@ module alu(
                 ALU_AND: result <= numberA & numberB;
                 ALU_OR:  result <= numberA | numberB;
                 ALU_XOR: result <= numberA ^ numberB;
-                ALU_NOR: result <= ~numberA | ~numberB;
+                ALU_NOR: result <= ~(numberA | numberB);
 
 
                 ALU_LUI: result <= {numberB[15:0],{16'b0}};
