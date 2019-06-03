@@ -9,7 +9,8 @@ module executing(
     input logic [5:0] func,
     output logic [31:0] resultOutput,
     output logic isAluOutputZero,
-    output wire [31:0] ioHiLo [1:0]
+    output wire [31:0] ioHiLo [1:0],
+    output wire [31:0] aluIn2Display
 );
 
 wire [3:0] aluControl;
@@ -20,6 +21,8 @@ wire [31:0] outputLo;
 wire [31:0] resultAluOutput;
 wire [31:0] aluInput1;
 wire regHiLoWrite;
+
+assign aluIn2Display=aluInput1;
 
 mux2_1_32bits mux2_1_32bits0 (aluSrc, readRegister1, immediateExtended, aluInput1);
 
