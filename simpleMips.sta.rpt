@@ -1,5 +1,5 @@
 Timing Analyzer report for simpleMips
-Fri May 31 15:17:51 2019
+Mon Jun 03 20:44:56 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -99,14 +99,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.43        ;
+; Average used               ; 1.45        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  39.9%      ;
-;     Processor 3            ;   1.8%      ;
-;     Processor 4            ;   1.7%      ;
+;     Processor 2            ;  42.0%      ;
+;     Processor 3            ;   1.5%      ;
+;     Processor 4            ;   1.4%      ;
 +----------------------------+-------------+
 
 
@@ -115,7 +115,7 @@ refer to the applicable agreement for further details.
 +----------------+--------+--------------------------+
 ; SDC File Path  ; Status ; Read at                  ;
 +----------------+--------+--------------------------+
-; simpleMips.SDC ; OK     ; Fri May 31 15:17:44 2019 ;
+; simpleMips.SDC ; OK     ; Mon Jun 03 20:44:48 2019 ;
 +----------------+--------+--------------------------+
 
 
@@ -323,8 +323,8 @@ No paths to report.
 ; 2.621 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][6]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][6]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.316     ; 2.491      ;
 ; 2.621 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][6]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[3][6]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.316     ; 2.491      ;
 ; 2.629 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][19]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][19]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.282     ; 2.533      ;
-; 2.638 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][30]  ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][30]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.119      ; 2.943      ;
 ; 2.638 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][2]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[3][2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.339     ; 2.485      ;
+; 2.638 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][30]  ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][30]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.119      ; 2.943      ;
 ; 2.639 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][2]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][2]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.339     ; 2.486      ;
 ; 2.643 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][22]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[0][22]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 2.902      ;
 ; 2.643 ; mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[4] ; mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[8] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 2.910      ;
@@ -347,13 +347,13 @@ No paths to report.
 ; 2.836 ; mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[5] ; mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[8] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 3.103      ;
 ; 2.837 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][19]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[0][19]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.281     ; 2.742      ;
 ; 2.838 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][19]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][19]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.281     ; 2.743      ;
-; 2.866 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[0][26]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][26]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.115      ; 3.167      ;
 ; 2.866 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][6]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][6]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.131      ; 3.183      ;
+; 2.866 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[0][26]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][26]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.115      ; 3.167      ;
 ; 2.867 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[0][26]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[3][26]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.115      ; 3.168      ;
 ; 2.873 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[0][7]   ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][7]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 3.122      ;
+; 2.874 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][23]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[3][23]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.309     ; 2.751      ;
 ; 2.874 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][30]  ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][2]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.554      ; 3.614      ;
 ; 2.874 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][30]  ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][18]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.554      ; 3.614      ;
-; 2.874 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][23]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[3][23]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.309     ; 2.751      ;
 ; 2.879 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[0][28]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][28]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.121      ; 3.186      ;
 ; 2.879 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[0][28]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[3][28]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.121      ; 3.186      ;
 ; 2.881 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][3]   ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[0][30]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.074      ; 3.141      ;
@@ -361,8 +361,8 @@ No paths to report.
 ; 2.894 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][5]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][5]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.315     ; 2.765      ;
 ; 2.898 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][7]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][7]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.088      ; 3.172      ;
 ; 2.898 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][7]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[3][7]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.088      ; 3.172      ;
-; 2.899 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][3]   ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][5]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.539      ; 3.624      ;
 ; 2.899 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][6]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[0][6]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.097      ; 3.182      ;
+; 2.899 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][3]   ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][5]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.539      ; 3.624      ;
 ; 2.900 ; mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[2] ; mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[8] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 3.167      ;
 ; 2.901 ; mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[2] ; mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[9] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 3.168      ;
 ; 2.901 ; mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[2] ; mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[7] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 3.168      ;
@@ -375,11 +375,11 @@ No paths to report.
 ; 2.933 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][29]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][29]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.092      ; 3.211      ;
 ; 2.936 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][29]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[0][29]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.092      ; 3.214      ;
 ; 2.936 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[0][4]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][4]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.326     ; 2.796      ;
-; 2.940 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][30]  ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[0][2]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 3.206      ;
 ; 2.940 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][21]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][21]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.349     ; 2.777      ;
+; 2.940 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][30]  ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[0][2]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 3.206      ;
+; 2.941 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][31]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][31]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.083      ; 3.210      ;
 ; 2.941 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][30]  ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][6]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.541      ; 3.668      ;
 ; 2.941 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][30]  ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][5]                                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.541      ; 3.668      ;
-; 2.941 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][31]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][31]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.083      ; 3.210      ;
 ; 2.942 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][9]   ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[0][23]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.077      ; 3.205      ;
 ; 2.942 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][21]                               ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[3][21]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.349     ; 2.779      ;
 ; 2.943 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][3]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[0][3]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.105      ; 3.234      ;
@@ -395,8 +395,8 @@ No paths to report.
 ; 3.004 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][3]   ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[0][31]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.069      ; 3.259      ;
 ; 3.005 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[0][30]  ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][30]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.119      ; 3.310      ;
 ; 3.011 ; mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[7] ; mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0|programCounterOutput[7] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 3.278      ;
-; 3.013 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][30]  ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][21]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.543      ; 3.742      ;
 ; 3.013 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][1]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][1]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.321     ; 2.878      ;
+; 3.013 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][30]  ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][21]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.543      ; 3.742      ;
 ; 3.016 ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[1][29]  ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][28]                               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.550      ; 3.752      ;
 ; 3.019 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][8]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[2][8]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.328     ; 2.877      ;
 ; 3.021 ; mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0|hiLo[1][8]                                ; mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0|registers[3][8]   ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.328     ; 2.879      ;
@@ -1490,7 +1490,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 31 15:17:42 2019
+    Info: Processing started: Mon Jun 03 20:44:46 2019
 Info: Command: quartus_sta simpleMips -c simpleMips
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1564,9 +1564,9 @@ Info (332146): Worst-case minimum pulse width slack is 9.213
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4980 megabytes
-    Info: Processing ended: Fri May 31 15:17:51 2019
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 4970 megabytes
+    Info: Processing ended: Mon Jun 03 20:44:56 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:10
 
 

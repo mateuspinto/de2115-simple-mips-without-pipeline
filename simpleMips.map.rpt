@@ -1,5 +1,5 @@
 Analysis & Synthesis report for simpleMips
-Fri May 31 15:14:31 2019
+Mon Jun 03 20:41:16 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -22,10 +22,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  14. Parameter Settings for Inferred Entity Instance: mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Div0
  15. Parameter Settings for Inferred Entity Instance: mips:mips0|executing:executing0|mdlu:mdlu0|lpm_divide:Mod0
  16. lpm_mult Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "mips:mips0|controller:controller0"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+ 17. Port Connectivity Checks: "mips:mips0|executing:executing0"
+ 18. Port Connectivity Checks: "mips:mips0|instructionFetch:instructionFetch0"
+ 19. Port Connectivity Checks: "mips:mips0|controller:controller0"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -51,7 +53,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 31 15:14:31 2019       ;
+; Analysis & Synthesis Status        ; Successful - Mon Jun 03 20:41:16 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; simpleMips                                  ;
 ; Top-level Entity Name              ; simpleMips                                  ;
@@ -6400,6 +6402,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+-----------------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips:mips0|executing:executing0"                                                                                  ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                  ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; aluIn2Display ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips:mips0|instructionFetch:instructionFetch0"                                                                ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                  ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; pcDisplay ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "mips:mips0|controller:controller0"                                                     ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -6442,7 +6462,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:27     ;
+; Top            ; 00:00:29     ;
 +----------------+--------------+
 
 
@@ -6452,7 +6472,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 31 15:11:09 2019
+    Info: Processing started: Mon Jun 03 20:37:29 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simpleMips -c simpleMips
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file cores/executing/outputexecuting.sv
@@ -6533,20 +6553,20 @@ Warning (10230): Verilog HDL assignment warning at controller.sv(162): truncated
 Warning (10230): Verilog HDL assignment warning at controller.sv(174): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/controller.sv Line: 174
 Warning (10230): Verilog HDL assignment warning at controller.sv(186): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/controller.sv Line: 186
 Info (12128): Elaborating entity "instructionFetch" for hierarchy "mips:mips0|instructionFetch:instructionFetch0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/mips.sv Line: 21
-Info (12128): Elaborating entity "instructionMemory" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|instructionMemory:instructionMemory0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 16
-Info (12128): Elaborating entity "programCounter" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 17
-Info (12128): Elaborating entity "adderProgramCounter" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|adderProgramCounter:adderProgramCounter0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 20
-Info (12128): Elaborating entity "shiftLef_2_32bits" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|shiftLef_2_32bits:shiftLef_2_32bitsBranch" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 21
-Info (12128): Elaborating entity "adder_32bits" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|adder_32bits:adder_32bits0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 22
-Info (12128): Elaborating entity "branchController" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|branchController:branchController0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 23
-Info (12128): Elaborating entity "mux2_1_32bits" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|mux2_1_32bits:mux2_1_32bitsBranch" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 24
-Info (12128): Elaborating entity "shiftLeft_2_26_28_bits" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|shiftLeft_2_26_28_bits:shiftLeft_2_26_28_bits0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 27
+Info (12128): Elaborating entity "instructionMemory" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|instructionMemory:instructionMemory0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 19
+Info (12128): Elaborating entity "programCounter" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|programCounter:programCounter0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 20
+Info (12128): Elaborating entity "adderProgramCounter" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|adderProgramCounter:adderProgramCounter0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 23
+Info (12128): Elaborating entity "shiftLef_2_32bits" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|shiftLef_2_32bits:shiftLef_2_32bitsBranch" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 24
+Info (12128): Elaborating entity "adder_32bits" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|adder_32bits:adder_32bits0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 25
+Info (12128): Elaborating entity "branchController" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|branchController:branchController0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 26
+Info (12128): Elaborating entity "mux2_1_32bits" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|mux2_1_32bits:mux2_1_32bitsBranch" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 27
+Info (12128): Elaborating entity "shiftLeft_2_26_28_bits" for hierarchy "mips:mips0|instructionFetch:instructionFetch0|shiftLeft_2_26_28_bits:shiftLeft_2_26_28_bits0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionFetch/instructionFetch.sv Line: 30
 Info (12128): Elaborating entity "instructionDecode" for hierarchy "mips:mips0|instructionDecode:instructionDecode0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/mips.sv Line: 22
 Info (12128): Elaborating entity "registerDatabase" for hierarchy "mips:mips0|instructionDecode:instructionDecode0|registerDatabase:registerDatabase0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionDecode/instructionDecode.sv Line: 17
 Info (12128): Elaborating entity "signalExtender16_32bits" for hierarchy "mips:mips0|instructionDecode:instructionDecode0|signalExtender16_32bits:signalExtender16_32bitsBranch" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionDecode/instructionDecode.sv Line: 19
 Info (12128): Elaborating entity "mux2_1_5bits" for hierarchy "mips:mips0|instructionDecode:instructionDecode0|mux2_1_5bits:muxWriteRegister" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/instructionDecode/instructionDecode.sv Line: 20
 Info (12128): Elaborating entity "executing" for hierarchy "mips:mips0|executing:executing0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/mips.sv Line: 23
-Info (12128): Elaborating entity "aritimeticalControl" for hierarchy "mips:mips0|executing:executing0|aritimeticalControl:aritimeticalControl0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 26
+Info (12128): Elaborating entity "aritimeticalControl" for hierarchy "mips:mips0|executing:executing0|aritimeticalControl:aritimeticalControl0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 29
 Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(16): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/aritimeticalControl.sv Line: 16
 Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(28): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/aritimeticalControl.sv Line: 28
 Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(33): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/aritimeticalControl.sv Line: 33
@@ -6570,10 +6590,10 @@ Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(122): 
 Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(127): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/aritimeticalControl.sv Line: 127
 Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(132): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/aritimeticalControl.sv Line: 132
 Warning (10230): Verilog HDL assignment warning at aritimeticalControl.sv(137): truncated value with size 32 to match size of target (4) File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/aritimeticalControl.sv Line: 137
-Info (12128): Elaborating entity "alu" for hierarchy "mips:mips0|executing:executing0|alu:alu0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 27
-Info (12128): Elaborating entity "mdlu" for hierarchy "mips:mips0|executing:executing0|mdlu:mdlu0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 30
-Info (12128): Elaborating entity "hiLoRegister" for hierarchy "mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 31
-Info (12128): Elaborating entity "outputExecuting" for hierarchy "mips:mips0|executing:executing0|outputExecuting:outputExecuting0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 34
+Info (12128): Elaborating entity "alu" for hierarchy "mips:mips0|executing:executing0|alu:alu0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 30
+Info (12128): Elaborating entity "mdlu" for hierarchy "mips:mips0|executing:executing0|mdlu:mdlu0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 33
+Info (12128): Elaborating entity "hiLoRegister" for hierarchy "mips:mips0|executing:executing0|hiLoRegister:hiLoRegister0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 34
+Info (12128): Elaborating entity "outputExecuting" for hierarchy "mips:mips0|executing:executing0|outputExecuting:outputExecuting0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/executing/executing.sv Line: 37
 Info (12128): Elaborating entity "memory" for hierarchy "mips:mips0|memory:memory0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/mips.sv Line: 24
 Info (12128): Elaborating entity "memoryDatabase" for hierarchy "mips:mips0|memory:memory0|memoryDatabase:memoryDatabase0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/cores/memory/memory.sv Line: 11
 Info (12128): Elaborating entity "writeBack" for hierarchy "mips:mips0|writeBack:writeBack0" File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/mips.sv Line: 25
@@ -6623,6 +6643,7 @@ Info (12133): Instantiated megafunction "mips:mips0|executing:executing0|mdlu:md
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_kcm.tdf
     Info (12023): Found entity 1: lpm_divide_kcm File: D:/Documents/git/FPGA_SystemVerilog_MIPS_Simplified-TP2-OC1-UFV/db/lpm_divide_kcm.tdf Line: 24
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13014): Ignored 222 buffer(s)
     Info (13019): Ignored 222 SOFT buffer(s)
 Info (286030): Timing-Driven Synthesis is running
@@ -6646,10 +6667,10 @@ Info (21057): Implemented 3554 device resources after synthesis - the final reso
     Info (21059): Implemented 56 output pins
     Info (21061): Implemented 3465 logic cells
     Info (21062): Implemented 8 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
-    Info: Peak virtual memory: 6017 megabytes
-    Info: Processing ended: Fri May 31 15:14:31 2019
-    Info: Elapsed time: 00:03:22
-    Info: Total CPU time (on all processors): 00:03:30
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 6021 megabytes
+    Info: Processing ended: Mon Jun 03 20:41:16 2019
+    Info: Elapsed time: 00:03:47
+    Info: Total CPU time (on all processors): 00:03:58
 
 
