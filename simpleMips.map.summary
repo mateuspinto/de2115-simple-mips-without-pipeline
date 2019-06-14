@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon Jun 03 20:41:16 2019
+Analysis & Synthesis Status : Successful - Thu Jun 13 09:08:52 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : simpleMips
 Top-level Entity Name : simpleMips
 Family : Cyclone IV E
-Total logic elements : 3,431
-    Total combinational functions : 3,337
-    Dedicated logic registers : 200
-Total registers : 200
+Total logic elements : 3,475
+    Total combinational functions : 3,443
+    Dedicated logic registers : 225
+Total registers : 225
 Total pins : 81
 Total virtual pins : 0
 Total memory bits : 0

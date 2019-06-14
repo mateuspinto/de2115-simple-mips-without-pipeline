@@ -28,7 +28,7 @@ module shiftLef_2_32bits(
 );
 
 always_comb begin
-    output0 <= 2 << input0;
+    output0 <= input0 << 2;
 end
 
 endmodule

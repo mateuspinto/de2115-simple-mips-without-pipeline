@@ -1,9 +1,10 @@
 module binaryToHexSevSegm(
+	 input logic clk,
     input logic [3:0] binary,
     output logic [6:0] display
 );
 
-always_comb begin
+always_ff @(posedge clk) begin
     case(binary)
             4'b0000: display <= 7'b1000000; //0
             4'b0001: display <= 7'b1111001; //1

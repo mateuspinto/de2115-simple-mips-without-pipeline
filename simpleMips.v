@@ -37,7 +37,7 @@ module simpleMips(
 	wire [1:0] select;
 	wire [9:0] derreference;
 
-	wire clockChoose, selectedClock, manualClock, reset;
+	wire clockChoose, selectedClock, manualClock, reset, dividedClock;
 
 
 //=======================================================
@@ -50,9 +50,10 @@ module simpleMips(
 	assign select = SW[2:1];
 	assign derreference = SW[17:8];
 
-	clockChooser clockChooser0 (clockChoose, CLOCK_50, manualClock, selectedClock);
+	clockDivider clockDivider0 (CLOCK_50, dividedClock);
+	clockChooser clockChooser0 (clockChoose, dividedClock, manualClock, selectedClock);
 	mips mips0 (selectedClock, reset, derreference, select, word);
-	displaySevSegm displaySevSegm0 (word, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7);
+	displaySevSegm displaySevSegm0 (CLOCK_50, word, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7);
 	
 
 endmodule
